@@ -423,7 +423,7 @@
     .teaching-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      gap: 24px;
     }
 
     .course-block {
@@ -509,6 +509,41 @@
       .teaching-grid { grid-template-columns: 1fr; }
       .book-block { grid-template-columns: 1fr; }
       .book-badge { writing-mode: horizontal-tb; margin-bottom: 8px; }
+    }
+
+    /* ─── EVALUATIONS ─── */
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .eval-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 20px 24px;
+    }
+
+    .eval-quote {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: #2c2820;
+      line-height: 1.65;
+    }
+
+    .eval-course {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .eval-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -601,7 +636,7 @@
         <div class="section-rule"></div>
       </div>
       <div class="book-block">
-        <div class="book-badge">Under Review at CUP</div>
+        <div class="book-badge">Under Review at Cambridge University Press</div>
         <div>
           <p class="book-title">The Repression Dilemma: Trust, Political Violence, and Policing</p>
           <p class="book-subtitle">Under Review at Cambridge University Press</p>
@@ -780,30 +815,93 @@
         <h2 class="section-title">Teaching</h2>
         <div class="section-rule"></div>
       </div>
-      <div class="teaching-grid" style="grid-template-columns: 1fr;">
+      <div class="teaching-grid">
         <div class="course-block">
-          <p class="course-level">Undergraduate</p>
+          <p class="course-level">Drexel University</p>
           <ul class="course-list">
-            <li>Introduction to Comparative Politics</li>
-            <li>Intermediate Comparative Politics</li>
-            <li>Authoritarian Politics</li>
-            <li>Politics of Policing</li>
+            <li>Authoritarian Politics <span style="font-size:0.82rem;color:var(--muted);">PSCI 379</span></li>
+            <li>Politics of Policing <span style="font-size:0.82rem;color:var(--muted);">PSCI 378</span></li>
+            <li>Comparative Politics II <span style="font-size:0.82rem;color:var(--muted);">PSCI 240</span></li>
+            <li>Comparative Politics I <span style="font-size:0.82rem;color:var(--muted);">PSCI 140</span></li>
+          </ul>
+        </div>
+        <div class="course-block">
+          <p class="course-level">Emory University</p>
+          <ul class="course-list">
+            <li>Repression and Control in Dictatorships <span style="font-size:0.82rem;color:var(--muted);">POLS 385 · Co-Instructor with <a href="https://www.jennifergandhi.com/" target="_blank" style="color:var(--gold);text-decoration:none;">Jennifer Gandhi</a></span></li>
+            <li>Introduction to Statistical Inference Lab <span style="font-size:0.82rem;color:var(--muted);">QTM 100 · Lab Instructor</span></li>
+            <li>Workshops on Quantitative and Qualitative Data Collection <span style="font-size:0.82rem;color:var(--muted);">Institute for Developing Nations &amp; The Carter Center</span></li>
+            <li>Introduction to International Relations <span style="font-size:0.82rem;color:var(--muted);">POLS 110 · Teaching Assistant</span></li>
+            <li>Intermediate International Relations <span style="font-size:0.82rem;color:var(--muted);">POLS 210 · Grader</span></li>
           </ul>
         </div>
 
       </div>
-    </section>
 
+
+    <!-- EVALUATIONS -->
+    <section id="evaluations">
+      <div class="section-header" style="margin-top: 48px;">
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--navy); letter-spacing: -0.02em;">Student Evaluations</h3>
+        <div class="section-rule"></div>
+      </div>
+      <div class="eval-grid">
+        <div class="eval-card">
+          <p class="eval-quote">"Professor Curtice is one of the best professors in the Drexel political science department. He is tough but his courses are worth it. Professor Curtice is a professor you can count on to give an amazing class."</p>
+          <p class="eval-course">Authoritarian Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"Professor Curtice executed class functions flawlessly, and imbued his students with a breadth of knowledge unparalleled in an 11-week course. He managed to display both positive and negative aspects of local, national, and international policing in a neutral, yet critical lens."</p>
+          <p class="eval-course">Politics of Policing</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"Dr. Curtice is very insightful and treats every student with respect, encouraging curiosity and engagement with the material and modern politics. Curtice is an amazing lecturer."</p>
+          <p class="eval-course">Introduction to Comparative Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"This course exposed me to the aspects of authoritarian regimes that we covered in other courses but took it a step further. Each week being dedicated to a different aspect of authoritarianism was a very efficient way to set up the course."</p>
+          <p class="eval-course">Authoritarian Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"Focusing on politics outside of the U.S. helped me better understand the reality of the world that I live in. The discussions were difficult at times, only to the benefit of the class. Dr. Curtice managed to facilitate a safe and productive learning environment."</p>
+          <p class="eval-course">Introduction to Comparative Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"I appreciated the way he was able to keep personal politics out of his lectures while explaining difficult political topics. Professor Curtice was also very accommodating in providing me with my disability accommodations."</p>
+          <p class="eval-course">Introduction to Comparative Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"Professor Curtice created an incredibly engaging environment and provided us with resources and readings that truly helped my learning experience. I will recommend this class to everyone in the major."</p>
+          <p class="eval-course">Authoritarian Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"It was one of the more difficult classes I have taken with Professor Curtice, but if you put in the work he was very willing to help. Thank you for one of the most rewarding classes I have had in a while."</p>
+          <p class="eval-course">Politics of Policing</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"There is a balance of defining terms and giving examples so that classmates can keep up with the topics even if they don't have background knowledge. Developing a language to discuss comparative politics was the most beneficial aspect."</p>
+          <p class="eval-course">Introduction to Comparative Politics</p>
+        </div>
+        <div class="eval-card">
+          <p class="eval-quote">"I liked the passion with which this course was taught. I could tell that the professor was passionate about the topic and was also very knowledgeable. These factors in turn made me care more about the subject."</p>
+          <p class="eval-course">Introduction to Comparative Politics</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>Travis B. Curtice &nbsp;·&nbsp; Department of Politics, Drexel University &nbsp;·&nbsp;
+    <p>Travis B. Curtice &nbsp;·&nbsp; Department of Politics, Drexel University</p>
+    <p style="margin-top:12px;">
       <a href="cv-curtice-25.pdf" target="_blank">Curriculum Vitae</a>
+      &nbsp;·&nbsp;
+      <a href="/cdn-cgi/l/email-protection#473325247275072335223f222b69222332"><span class="__cf_email__" data-cfemail="3d495f5e080f7d594f5845585113585948">[email&#160;protected]</span></a>
+      &nbsp;·&nbsp;
+      <a href="https://scholar.google.com/citations?user=yJbyOhcAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
     </p>
-    <p style="margin-top:8px; font-size: 0.6rem; opacity:0.5;">Design prototype — traviscurtice.com</p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Active nav highlight on scroll
     const sections = document.querySelectorAll('section[id]');
     const links = document.querySelectorAll('nav a');
@@ -812,14 +910,4 @@
       entries.forEach(e => {
         if (e.isIntersecting) {
           links.forEach(l => l.classList.remove('active'));
-          const active = document.querySelector(`nav a[href="#${e.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { threshold: 0.3 });
-
-    sections.forEach(s => observer.observe(s));
-  </script>
-
-</body>
-</html>
+          const active = 
